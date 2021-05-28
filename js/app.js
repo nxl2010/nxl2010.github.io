@@ -4,16 +4,8 @@
 const clear = document.querySelector(".clear");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
-
-// Classes names
-// const CHECK = "fa-check-circle";
-// const UNCHECK = "fa-circle-thin";
-// const LINE_THROUGH = "lineThrough";
-
-// Variables
+const LINE_THROUGH = "lineThrough";
 let LIST, id;
-
-// get item from localstorage
 let data = localStorage.getItem("TODO");
 
 // check if data is not empty
@@ -36,18 +28,18 @@ function loadList(array){
 
 // clear the local storage
 clear.addEventListener("click", function(){
-    localStorage.clear();
+    localStorage.removeItem("TODO");
     location.reload();
 });
 // add to do function
 
 function addToDo(toDo, id, done, trash){
-    
+     const LINE = done ? LINE_THROUGH : "";
     if(trash){ return; }
     const item = `      <li class="item">
-                            <p class="text">${toDo}</p>
+                            <p class="text ${LINE}">${toDo}</p>
                             <i class="ti-check" job="ndss" id="${id}"></i>
-                            <i class="ti-alarm-clock"></i>
+                            <i class="ti-alarm-clock" job="podoro"></i>
                             <i class="ti-close" job="delete" id="${id}"></i>
                         </li>
                 `;
@@ -56,7 +48,6 @@ function addToDo(toDo, id, done, trash){
     
     list.insertAdjacentHTML(position, item);
 }
-
 // add an item to the list user the enter key
 document.addEventListener("keyup",function(even){
     if(event.keyCode == 13){
@@ -85,8 +76,9 @@ document.addEventListener("keyup",function(even){
 
 // complete to do
 function completeToDo(element){
-    element.parentNode.querySelector(".text").classList.add('style');   
-
+    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
+    
+    LIST[element.id].done = LIST[element.id].done ? false : true;
 }
 
 // remove to do
@@ -95,7 +87,9 @@ function removeToDo(element){
     
     LIST[element.id].trash = true;
 }
-
+function podoroTodo(element){
+    window.open('file:///C:/Users/PC/Downloads/pomodoro-master/index.html', '_blank', 'toolbar=0,location=0,menubar=0',"height=200,width=200");    
+}
 // target the items created dynamically
 
 list.addEventListener("click", function(event){
@@ -106,6 +100,9 @@ list.addEventListener("click", function(event){
         completeToDo(element);
     }else if(elementJob == "delete"){
         removeToDo(element);
+    }
+    else if(elementJob=="podoro"){
+        podoroTodo(element);
     }
     
     // add item to localstorage ( this code must be added where the LIST array is updated)

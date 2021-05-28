@@ -9,6 +9,7 @@ html{
 	font-family: arial;
 }
 /*RESET CSS*/
+/*Tạo background*/
 .nbackground{
 	z-index: 1;
 	position: absolute;
@@ -18,13 +19,59 @@ html{
 	height: 100vh;
 	background-size: 1200px;
 }
+/*Tên trang*/
 .nameweb{
 	height: 95px;
 	width: 519px;
-	background-image: url('https://nxl2010.github.io/assets/Untitled-1.png');
+	background-image: url('https://nxl2010.github.io/assets/assets/Untitled-1.png');
 	position: absolute;
 	top:20px;
 	left:420px;
+}
+#skillchart{
+	width: 300px;
+	height:320px;
+	background-color: rgba(19,197,174,0.15);
+	position: absolute;
+	bottom: 50px;
+	left:78px;
+}
+#skillchart p1{
+	margin:1px 65px 0px 0px;
+	display: inline-block;
+	color: white;
+	text-shadow: 0 0 5px #00c6ff;
+	font-size: 15px;
+}
+#skillchart p2{
+	margin:1px 50px 0px 0px;
+	display: inline-block;
+	color: white;
+	text-shadow: 0 0 5px #00c6ff;
+	font-size: 15px;
+
+}
+#close2{
+	position: absolute;
+	right:5px;
+	top:3px;
+	color: white;
+	text-shadow: 0 0 5px #00c6ff;
+	cursor: pointer;
+}
+#skillchart p3{
+	display: inline-block;
+	color: white;
+	text-shadow: 0 0 5px #00c6ff;
+	font-size: 15px;
+
+}
+#skillchart #myChart{
+	/*position: absolute;
+	left:50px;
+	bottom: 5px;*/
+	width: 282px;
+	height:270px;
 }
  .nbackground >#clock{
 	position: absolute;
@@ -35,6 +82,9 @@ html{
 	left: 430px;
 	border-radius: 5px;
 }
+/*#clock{
+	position:relative;
+}*/
 #clock .navclock{
 	width: 105px;
 	height: 76px;
@@ -46,6 +96,7 @@ html{
 	border-radius: 2px;
 }
 #clock .navclock h1{
+	margin: 0px;
 	text-align: center;
 	color :rgb(243,254,253);
 	font-size: 18px;
@@ -59,6 +110,32 @@ html{
 	font-size: 36px;
 	font-weight: bold;
 	text-shadow: 0 0 5px #00c6ff;
+}
+.menuBar{
+	/*background-color: black;*/
+	position: absolute;
+	right:12px;
+	top:250px;
+	width: 20px;
+	height:200px;
+}
+#bar1,#bar2,#bar3,#bar4,#bar5,#bar6{
+	margin: 10px 0px;
+}
+.menuBar i{
+	cursor: pointer;
+	color: white;
+	font-size: 18px;
+}
+.menuBar .ti-control-record{
+	position: absolute;
+	font-size:4px;
+	width: 5px;
+	height:5px;
+	color:white;
+}
+#led4{
+	display: none;
 }
 #task{
 	background-color: rgba(100,197,174,0.3);
@@ -76,6 +153,7 @@ html{
 #headtask h2{
 	text-shadow: 0 0 5px #00c6ff;
 	padding: 5px;
+	margin: 0;
 	font-size: 20px;
 	color: white;
 }
@@ -138,7 +216,10 @@ html{
 	width: 400px;
 	background-color: rgba(48,48,48,0.1);
 }
-
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
 #list p{
 	font-size: 18px;
 	padding: 2px 12px;
@@ -148,18 +229,21 @@ html{
 	position: absolute;
 	top:0px;
 	right:27px;
+	cursor: pointer;
 }
 .ti-alarm-clock{
 	padding: 2px;
 	position: absolute;
 	top:0px;
 	right:50px;
+	cursor: pointer;
 }
 .ti-close{
 	position: absolute;
 	top:0px;
 	right:5px;
 	padding: 2px;
+	cursor: pointer;
 }
 	
 .danhngon p{
@@ -181,20 +265,30 @@ html{
 #monney{
 	display: none;
 	position: absolute;
-	bottom:148px;
-	right:347px;
+	bottom:50px;
+	right:50px;
 	height: 355px;
 	width: 270px;
-	background-color: rgba(29,26,25,0.7);
+	background-color: rgba(19,197,174,0.15);
 }
 
 #monney .header{
+	position: absolute;
 	height: 26px;
 	width: 100%;
-	background-color: black;
+	text-shadow: 0 0 5px #00c6ff;
+
+	/*background-color: rgba(19,197,174,0.3);*/
+}
+#monney .header h1{
+	margin: 0;
+	padding: 5px;
+	color:rgb(230,230,230);
+	font-size: 17px;
 }
 #monney .mainbody{
 	position: absolute;
+	top:26px;
 	width: 100%;
 	height:302px;
 }
@@ -203,7 +297,7 @@ html{
 	bottom: 0px;
 	height: 31px;
 	width: 100%;
-	background-color: black;
+	background-color: rgba(19,197,174,0.15);
 }
 .headmoney{
 	margin: 5px 0px;
@@ -284,9 +378,9 @@ html{
 	height :21px;
 	background-color: rgba(48,48,48,0.7);
 	position: absolute;
-	left:65px;
+	left:60px;
 }
-#money{
+#moneyy{
 	color:white;
 	margin: 5px;
 	border:none;
@@ -296,44 +390,42 @@ html{
 	height :21px;
 	background-color: rgba(48,48,48,0.7);
 	position: absolute;
-	right:20px;
+	right:25px;
 }
-#test .ti-trash{
+.foolter .ti-trash{
 	padding: 6px;
-	color: rgb(5,129,149);
+	color: rgb(230,230,230);
 	font-size: 20px;
 	position: absolute;
 	bottom: 1px;
 }
-#test .ti-printer{
+.foolter .ti-printer{
 	padding: 6px;
-	color: rgb(5,129,149);
+	color: rgb(230,230,230);
 	font-size: 20px;
 	position: absolute;
 	left:31px;
 	bottom: 1px;
 }
-.ti-pencil{
+
+.foolter .ti-pencil{
 	padding: 5px 0px;
-	color: rgb(5,129,149);
+	color: rgb(230,230,230);
 	font-size: 20px;
 	position: absolute;
-	right:2px;
+	right:4px;
 }
 #show{
 	cursor: pointer;
 }
-#test .ti-close{
-	color: rgba(159,51,253,1);
+.header .ti-close{
+	color: rgb(230,230,230);
 	position: absolute;
 	top:5px;
 	right:8px;
-}
-h1{
-	padding: 4px;
-	color: white;
-	font-size: 17px;
+	text-shadow: 0 0 5px #00c6ff;
 	
 }
+
 
 /*The MONEY*/

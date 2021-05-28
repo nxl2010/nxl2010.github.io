@@ -4,10 +4,8 @@
 	<link rel="shortcut icon" type="image/png" href="./assets/logo_web.png">	
 	<link rel="stylesheet" href="css/main_style.css">
 	<title>NXLZero</title>
- 	<!-- <script type="text/javascript" src="./js/script.js" >
- 		
- 	</script> -->
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 	<div class="main">
@@ -19,6 +17,14 @@
 				<script src="./js/script.js"></script>	
 				</p>
 			</div>	
+			<div id="skillchart">
+				<p1>19T</p1>
+				<p2>NXLZero</p2>
+				<p3>MALE</p3>
+				<i class="ti-close" id="close2"></i>
+    			<canvas id="myChart" width="300" height="300" style="display: block; width: 300px; height: 300px;"></canvas>
+			</div>
+			<script src="./js/chartt.js"></script>
 			<div id="clock">
 					<div class="navclock">
 						<h1>TET</h1>
@@ -38,6 +44,30 @@
 						<p id="nav4"></p>
 					</div>
 				<script src="./js/clock.js"></script>	
+			</div>
+			<div class="menuBar">
+				<div id="bar1">
+					<i class="ti-home"></i>
+					<i class="ti-control-record" id="led1"></i>
+				</div>
+				<div id="bar2">
+					<i class="ti-bar-chart" id="open2"></i>
+					<i class="ti-control-record" id="led2"></i>
+				</div>
+				<div id="bar3">
+					<i class="ti-clipboard" id="open3"></i>
+					<i class="ti-control-record" id="led3"></i>
+				</div>
+				<div id="bar4">
+					<i class="ti-money" id="open4"></i>
+					<i class="ti-control-record" id="led4"></i>
+				</div>
+				<div id="bar5">
+						<a href="https://www.facebook.com/?ref=tn_tnmn"><i class="ti-facebook"></i></a>
+				</div>
+				<div id="bar6">
+						<a href="https://www.youtube.com/"><i class="ti-youtube"></i></a>
+				</div>
 			</div>
 			<div id="task">
 				<div id="headtask">
@@ -70,57 +100,35 @@
 							<div id="close"><i class="ti-close"></i></div>	
 						</div>
 						<div class="mainbody">
-							<div class="headmoney">
-								<div id="cardproduct">
-									<p>Nam</p>
-								</div>
-								<div id="cardmoney">
-									<p>20k</p>
-								</div>
-							</div>
+							<ul id="sss">
+            				</ul>
 							<div id="foolmoney">
 								<div id="foolContent">
 									<p>TỔNG TIỀN:</p>
 								</div>
 								<div id="sumMoney">
-									<p>30k</p>
+									<p id="sumM"></p>
 								</div>
 							</div>
 				
 
 						</div>
 						<div class="foolter">
-							<i class="ti-trash"></i>
-							<div id="test">
-								<i class="ti-printer"></i>
-							</div>
-							
+							<div class="clear1">
+                				<i class="ti-trash"></i>
+            				</div>
+							<i class="ti-printer"></i>							
 							<i class="ti-pencil"></i>
-							<input type="text" id="vatPham">
-							<input type="text" id="money">
+							<input type="text" id="vatPham"  placeholder="Thêm sản phẩm">
+							<input type="number" id="moneyy"  placeholder="$$">
 						</div>
+ 						<script src="./js/money.js"></script>
+
 			</div>	
 		</div>
 	</div>	
 		<script src="./js/script.js"></script>	
-		<script language="javascript">
- 
-            document.getElementById("close").onclick = function () {
-                document.getElementById("monney").style.display = 'none';
-            };
- 
-         
-            document.getElementById("test").onclick = function () {
-                document.getElementById("foolmoney").style.display = 'block';
-            };
-             document.getElementById("close1").onclick = function () {
-                document.getElementById("task").style.display = 'none';
-            };
-            document.getElementById("add").onclick = function () {
-                document.getElementById("test2").style.display = 'block';
-            };
-        </script>
- 
+		<script src="./js/openclose.js"></script>
 </body>
 
 </html>
