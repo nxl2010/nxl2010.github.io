@@ -13,13 +13,22 @@
 	<div id="trol">
 		
 	</div>
+	<div id="giup">
+		<p>WEB TỰ TẠO THƯ VIỆN TỪ VỰNG</p>
+		<P>HƯỚNG DẪN: Bạn phải nhập dữ liệu đầu vào để tạo dữ liệu cho web(khoảng hơn 10 từ) ở ô bên phải <br>
+		Sau đó ấn start để trải nghiệm<br></p>
+		<div id="s" onclick="close33()"></div>
+	</div>
 	<div class="background">
 		<div class="input">
 			<div id="data">
 				<input type="text" id="word"  placeholder="Nhập từ">
 				<input type="text" id="mean"  placeholder="Nghĩa">
 				<input type="text" id="type"  placeholder="Ghi chú">
-				<input type="button" onclick="nhap()">
+				<div id="nhap">
+					<p>Ấn ENTER để nhập 
+</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -45,8 +54,17 @@
  href="https://nxlinfo.github.io/"><p>NXLZERO</p></a>
 		</div>
 		<div class="navThang" id="help">
-			<p>HELP</p>
+			<p onclick="open33()">HELP</p>
 		</div>
+		<script type="text/javascript">
+			function close33(){
+		    	document.getElementById("giup").style.display = 'none';
+			}
+			function open33(){
+			    document.getElementById("giup").style.display = 'block';
+
+			}
+		</script>
 	</div>
 	<div class="output">
 		<div id="quiz">
