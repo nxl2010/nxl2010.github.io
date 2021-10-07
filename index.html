@@ -1,134 +1,104 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-	 <link rel="stylesheet" type="text/css" href="fonts/themify-icons/themify-icons.css">
-	<link rel="shortcut icon" type="image/png" href="./assets/logo_web.png">	
+	<!-- <link rel="stylesheet" type="text/css" href="fonts/themify-icons/themify-icons.css"> -->
+	<!-- <link rel="shortcut icon" type="image/png" href="./assets/logo_web.png">	 -->
 	<link rel="stylesheet" href="css/main_style.css">
 	<title>NXLZero</title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 	<script src="./js/tool.js"></script>	
 </head>
 <body>
-	<div class="main">
-		<div class="nbackground">
-			<div class="nameweb">
+	<div id="trol">
+		
+	</div>
+	<div class="background">
+		<div class="input">
+			<div id="data">
+				<input type="text" id="word"  placeholder="Nhập từ">
+				<input type="text" id="mean"  placeholder="Nghĩa">
+				<input type="text" id="type"  placeholder="Ghi chú">
+				<input type="button" onclick="nhap()">
 			</div>
-			<div class="danhngon">
-				<p>
-				<script src="./js/script.js"></script>	
-				</p>
-			</div>	
-			<div id="skillchart">
-				<p1>19T</p1>
-				<p2>NXLZero</p2>
-				<p3>MALE</p3>
-				<i class="ti-close" id="close2"></i>
-    			<canvas id="myChart" width="300" height="300" style="display: block; width: 300px; height: 300px;"></canvas>
-			</div>
-			<script src="./js/chartt.js"></script>
-			<div id="clock">
-					<div class="navclock">
-						<h1>TET</h1>
-						<p id="nav1"></p>
-					<p1></p1>						
-					</div>
-					<div class="navclock">
-						<h1>BIRTH</h1>
-						<p id="nav2"></p>
-					</div>
-					<div class="navclock">
-						<h1>HOME</h1>
-						<p id="nav3"></p>	
-					</div>
-					<div class="navclock">
-						<h1>TEST</h1>
-						<p id="nav4"></p>
-					</div>
-				<script src="./js/clock.js"></script>	
-			</div>
-			<div class="menuBar">
-				<div id="bar1">
-					<i class="ti-home"></i>
-					<i class="ti-control-record" id="led1"></i>
-				</div>
-				<div id="bar2">
-					<i class="ti-bar-chart" id="open2"></i>
-					<i class="ti-control-record" id="led2"></i>
-				</div>
-				<div id="bar3">
-					<i class="ti-clipboard" id="open3"></i>
-					<i class="ti-control-record" id="led3"></i>
-				</div>
-				<div id="bar4">
-					<i class="ti-money" id="open4"></i>
-					<i class="ti-control-record" id="led4"></i>
-				</div>
-				<div id="bar5">
-						<a href="https://www.facebook.com/?ref=tn_tnmn"><i class="ti-facebook"></i></a>
-				</div>
-				<div id="bar6">
-						<a href="https://www.youtube.com/"><i class="ti-youtube"></i></a>
-				</div>
-			</div>
-			<div id="task">
-				<div id="headtask">
-					<h2>TASKS</h2>
-					<div class="add-to-do" id="test2">
-
-            				<input type="text" id="input" placeholder="Add a to-do">
-        			</div>
-					<div id="close1">
-						<i class="ti-close"></i>
-					</div>
-					<div class="clear">
-                		<i class="ti-trash"></i>
-            		</div>
-            		<div id="add">	
-            			<i class="ti-pencil"></i>
-            		</div>			
-				</div>
-				<div class="bodyTask">
-            		<ul id="list">
-            		</ul>
-				</div>
-				
-    			<script src="js/app.js"></script>
-
-			</div>
-			<div id="monney">
-						<div class="header">
-							<h1>HÓA ĐƠN</h1>
-							<div id="close"><i class="ti-close"></i></div>	
-						</div>
-						<div class="mainbody">
-							<ul id="sss">
-            				</ul>
-							<div id="foolmoney">
-								<div id="foolContent">
-									<p>TỔNG TIỀN:</p>
-								</div>
-								<div id="sumMoney">
-									<p id="sumM"></p>
-								</div>
-							</div>
-				
-
-						</div>
-						<div class="foolter">
-							<div class="clear1">
-                				<i class="ti-trash"></i>
-            				</div>
-							<i class="ti-printer"></i>							
-							<i class="ti-pencil"></i>
-							<input type="text" id="vatPham"  placeholder="Thêm sản phẩm">
-							<input type="number" id="moneyy"  placeholder="$$">
-						</div>
- 						<script src="./js/money.js"></script>
-
-			</div>	
 		</div>
-	</div>	
-		<script src="./js/script.js"></script>	
-		<script src="./js/openclose.js"></script>
-</body>
+	</div>
+	<button id="butTrol" onclick="trol()">DON'T TOUCH</button>
+	<script type="text/javascript">
+		function trol(){
+		    document.getElementById("trol").style.display = 'block';
+			var bell = new Audio("trol.mp3");
+        	bell.play();
 
+		}
+	</script>
+	<div class="hinh_thang">
+		<div class="navThang" id="hello">
+			<!-- <p>HELLO</p> -->
+			<a style="text-decoration:none;"
+
+ href="https://nxlzero.notion.site/NXLZero-8b6aeacb07e54aadabafa32ae274ad5c"><p>PAGE</p></a>
+		</div>
+		<div class="navThang" id="info">
+			<a style="text-decoration:none;"
+
+ href="https://nxlinfo.github.io/"><p>NXLZERO</p></a>
+		</div>
+		<div class="navThang" id="help">
+			<p>HELP</p>
+		</div>
+	</div>
+	<div class="output">
+		<div id="quiz">
+			<p id="ques">Hello</p>
+		</div>
+		<div class="mode">
+			<div class="navmode" onclick="getQues()">
+				<p>START</p>
+			</div>
+			<div class="navmode" >
+				<p>STOP</p>
+			</div>
+			<div class="navmode">
+				
+			</div>
+			<div class="navmode">
+				
+			</div>
+		</div>
+		<div id="count">
+			<p id="count1">0</p>
+			<p id="count2">0</p>
+		</div>
+		<div id="result">
+
+		</div>
+		<div class="sx">
+			<div class="xs" id="name">
+				Word
+			</div>
+			<div class="xs" id="nghia">
+				Mean
+			</div>
+			<div class="xs" id="ghiChu">
+				Note
+			</div>
+		</div>
+		<div id="answer">
+			<div class="ns">
+				<p id="a" onclick="nxzr(this)">Xin chao</p>
+			</div>
+			<div class="ns" >
+				<p id="b" onclick="nxzr(this)">Xin chao</p>
+			</div>
+			<div class="ns">
+				<p id="c" onclick="nxzr(this)">Xin chao</p>
+			</div>
+			<div class="ns">
+				<p id="d" onclick="nxzr(this)">Xin chao</p>
+			</div>
+		</div>
+	</div>
+
+</body>
 </html>
