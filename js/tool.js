@@ -84,15 +84,19 @@ var count2=0
     var type=String(user5[ran].type);
 
     if(ketQua==answer){
+        document.getElementById("quiz").style.background = '#02ff00';        
         // document.getElementById("ns").style.background = '#02ff00';
         count++;
     }else{
         // window.setTimeout(showContent, 200);
-        // document.getElementsByClassName("ns").style.background = 'red';
+        document.getElementById("quiz").style.background = 'red';
         // document.getElementById("result").style.backgroundColor = 'red';
         
         count2++;
     }
+    setTimeout(function() {
+        document.getElementById("quiz").style.background = 'rgba(19,197,174,0.3)';
+        }, 300);
     // Giải thích nghĩa
     document.getElementById("name").innerHTML=sum;
     document.getElementById("nghia").innerHTML=answer;

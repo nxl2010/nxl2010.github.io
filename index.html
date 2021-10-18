@@ -5,14 +5,14 @@
 	<!-- <link rel="shortcut icon" type="image/png" href="./assets/logo_web.png">	 -->
 	<link rel="stylesheet" href="css/main_style.css">
 	<title>NXLZero</title>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
  	<script src="./js/tool.js"></script>	
 </head>
 <body>
-	<div id="trol">
+<!-- 	<div id="trol">
 		
-	</div>
+	</div> -->
 	<div id="giup">
 		<p>WEB TỰ TẠO THƯ VIỆN TỪ VỰNG</p>
 		<P>HƯỚNG DẪN: Bạn phải nhập dữ liệu đầu vào để tạo dữ liệu cho web(khoảng hơn 10 từ) ở ô bên phải <br>
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 	</div>
-	<button id="butTrol" onclick="trol()">DON'T TOUCH</button>
+	<!-- <button id="butTrol" onclick="trol()">DON'T TOUCH</button>
 	<script type="text/javascript">
 		function trol(){
 		    document.getElementById("trol").style.display = 'block';
@@ -40,7 +40,7 @@
         	bell.play();
 
 		}
-	</script>
+	</script> -->
 	<div class="hinh_thang">
 		<div class="navThang" id="hello">
 			<!-- <p>HELLO</p> -->
@@ -71,37 +71,15 @@
 			<p id="ques">Hello</p>
 		</div>
 		<div class="mode">
-			<div class="navmode" onclick="getQues()">
-				<p>START</p>
-			</div>
-			<div class="navmode" >
-				<p>STOP</p>
-			</div>
-			<div class="navmode">
-				
-			</div>
-			<div class="navmode">
-				
-			</div>
+				<i class="fa fa-play" onclick="getQues()"></i>
+				<i class="fa fa-undo"></i>		
 		</div>
 		<div id="count">
 			<p id="count1">0</p>
 			<p id="count2">0</p>
 		</div>
-		<div id="result">
 
-		</div>
-		<div class="sx">
-			<div class="xs" id="name">
-				Word
-			</div>
-			<div class="xs" id="nghia">
-				Mean
-			</div>
-			<div class="xs" id="ghiChu">
-				Note
-			</div>
-		</div>
+		
 		<div id="answer">
 			<div class="ns">
 				<p id="a" onclick="nxzr(this)">Xin chao</p>
@@ -116,7 +94,22 @@
 				<p id="d" onclick="nxzr(this)">Xin chao</p>
 			</div>
 		</div>
+		<p id="logo">~~~~~~~~~~~~NXLZERO~~~~~~~~~~~~</p>
 	</div>
+	<div class="sx">
+			<div class="dapAn">
+				<p>ĐÁP ÁN</p>
+			</div>	
+			<div class="xs" id="name">
+				Word
+			</div>
+			<div class="xs" id="nghia">
+				Mean
+			</div>
+			<div class="xs" id="ghiChu">
+				Note
+			</div>
+		</div>
 
 </body>
 </html>
