@@ -148,10 +148,11 @@ html{
 	cursor: pointer;
 }
 .ns p{
+	padding-top: 40px;
 	color:white;
 	text-align: center;
-	margin-top: 33px;
 	font-size: 23px;
+	height: 100px;
 }
 #answer .ns:hover {
 	background-color: rgba(19,197,174,0.5);

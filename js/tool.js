@@ -66,7 +66,7 @@ function getQues(){
     var answer1=String(user5[ran1].mean);
     var answer2=String(user5[ran2].mean);
     var answer3=String(user5[ran3].mean);
-    var array=[answer,answer1,answer2,answer];
+    var array=[answer,answer1,answer2,answer3];
     shuffleArray(array);
     document.getElementById("a").innerHTML=array[0];
     document.getElementById("b").innerHTML=array[1];
